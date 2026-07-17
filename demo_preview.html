@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience the Concierge | Live Interaction Demo</title>
+    <meta name="description" content="Interactive demo of our premium AI concierge interaction logic.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, .font-serif { font-family: 'Playfair Display', serif; }
+        .typing-cursor::after { content: '|'; animation: blink 1s infinite; }
+        @keyframes blink { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="border-b border-gray-200 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-2xl font-serif font-bold tracking-tight text-slate-900">Concierge <span class="text-blue-600">AI</span></div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index_home.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                    <a href="solutions_overview.html" class="text-gray-600 hover:text-blue-600 transition">Solutions</a>
+                    <a href="demo_preview.html" class="bg-blue-600 text-white px-5 py-2 rounded-full font-medium hover:bg-blue-700 transition shadow-md">Try Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Simulation Section -->
+    <section class="py-24 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-5xl font-bold mb-4">The Concierge Experience</h1>
+                <p class="text-xl text-gray-600">Witness how our "Interaction Layer" handles nuance and intent.</p>
+            </div>
+
+            <!-- Mock Chat Interface -->
+            <div class="max-w-3xl mx-auto bg-white border border-gray-200 rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[500px]">
+                <div class="bg-slate-900 p-4 text-white">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold">Active Session: New Lead Inquiry</span>
+                        <span class="text-xs opacity-50">Agent Online</span>
+                    </div>
+                </div>
+                <div id="chat-box" class="flex-1 p-6 overflow-y-auto space-y-4 bg-slate-50">
+                    <div class="bg-blue-100 border border-blue-200 p-3 rounded-lg max-w-[80%] ml-auto text-sm shadow-sm">
+                        Hello. I'm not sure if anyone can help me with a bulk order. How do you guys handle custom volume?
+                    </div>
+                    <div class="bg-white border border-gray-200 p-3 rounded-lg max-w-[80%] mr-auto text-sm shadow-sm">
+                        <span class="text-blue-600 font-bold block mb-1">Concierge AI</span>
+                        I understand—handling volume requires a very different workflow than standard one-off orders. Let me check our current capacity for high-volume fulfillment...
+                    </div>
+                </div>
+                <div class="p-4 border-t border-gray-200 bg-white">
+                    <input type="text" placeholder="Type your query to see the logic..." class="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" disabled>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reality Check -->
+    <section class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-6">Beyond the Demo</h2>
+            <p class="max-w-3xl text-lg text-gray-300 mb-10 leading-relaxed">What you just saw is a "proof of concept." In reality, our systems are backed by integrated CRM syncs (HubSpot/Salesforce), RAG-driven knowledge bases, and proactive task creation. We don't just talk; we act.</p>
+            <a href="solutions_overview.html" class="inline-block px-8 py-3 bg-blue-600 rounded-full font-bold hover:bg-blue-700 transition">View Full Solutions Architecture</a>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-gray-200 bg-white text-center">
+        <p class="text-sm text-gray-400">&copy; 2023 Concierge AI. Powered by Sophistication.</p>
+    </footer>
+</body>
+</html>
